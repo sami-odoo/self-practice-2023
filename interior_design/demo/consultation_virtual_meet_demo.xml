@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="Consultation_Virtual_demo1" model="consultaion.virtual.meet">
+            <field name="customer_name">Sachin Tendulkar</field>
+            <field name="property_painting">1</field>
+         </record>
+    
+         <record id="Consultation_Virtual_demo2" model="consultaion.virtual.meet">
+            <field name="customer_name">Virendra Sehwag</field>
+            <field name="property_furnishing">1</field>
+         </record>
+    
+         <record id="Consultation_Virtual_demo3" model="consultaion.virtual.meet">
+            <field name="customer_name">Shikhar Dhawan</field>
+            <field name="property_painting">1</field>
+         </record>
+    
+         <record id="Consultation_Virtual_demo4" model="consultaion.virtual.meet">
+            <field name="customer_name">Suresh Raina</field>
+            <field name="property_furnishing">1</field>
+         </record>
+    
+         <record id="Consultation_Virtual_demo5" model="consultaion.virtual.meet">
+            <field name="customer_name">Andrew Simonds</field>
+            <field name="property_painting">1</field>
+            <field name="property_furnishing">1</field>
+         </record>
+    </data>
+</odoo>

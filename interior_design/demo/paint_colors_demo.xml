@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="paint_colors_demo_1" model="design.interior.paint">
+            <field name="name">Red</field>
+        </record>
+        <record id="paint_colors_demo_2" model="design.interior.paint">
+            <field name="name">Blue</field>
+        </record>
+        <record id="paint_colors_demo_3" model="design.interior.paint">
+            <field name="name">Green</field>
+        </record>
+        <record id="paint_colors_demo_4" model="design.interior.paint">
+            <field name="name">Orange</field>
+        </record>
+    </data>
+</odoo>

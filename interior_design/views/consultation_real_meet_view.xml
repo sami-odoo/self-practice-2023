@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <record id="consultation_real_meet_action" model="ir.actions.act_window">
+        <field name="name">Real Meet</field>
+        <field name="res_model">consultaion.real.meet</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{"search_default_meeting_state":1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No designs that can be shown
+            </p>
+        </field>
+    </record>
+
+    <record id="Consultation_real_list_view" model="ir.ui.view">
+        <field name="name">Consultation Real List View</field>
+        <field name="model">consultaion.real.meet</field>
+        <field name="arch" type="xml">
+             <tree string="Channel" >
+                 <field name="customer_name" string="Title"/>
+                 <field name="property_painting" string="Painting"/>
+                 <field name="property_furnishing" string="Furnishing"/>
+                 <field name="type_id" string="Property Type"/>
+                 <field name="date_availablity" string="Meeting Date"/>
+                 <field name="meeting_state" string="Meeting State"/>
+             </tree>
+         </field>
+     </record>
+
+     <record id="Consultation_real_form_view" model="ir.ui.view">
+        <field name="name">Consultation Real Form View</field>
+        <field name="model">consultaion.real.meet</field>
+        <field name="arch" type="xml">
+            <form string="test">
+                <header>
+                    <span attrs="{'invisible': [('meeting_state', 'in', ('done','cancelled'))]}">
+                        <button name="perform_cancel" type="object" string="Cancel" />
+                        <button name="perform_booking" type="object" string="book"/>
+                    </span>
+                    <field name="meeting_state" widget="statusbar" options="{'clickable': '1'}"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Booked" bg_color="bg-success"
+                        attrs="{'invisible': [('meeting_state', 'in', ('new','done','cancelled'))]}"/>
+                    <widget name="web_ribbon" title="Cancelled" bg_color="bg-danger"
+                        attrs="{'invisible': [('meeting_state', 'in', ('new','done','generted'))]}"/>
+                    <h1> 
+                        <field name="customer_name" string="Customer name" />
+                    </h1>
+                    <br/>    
+                    <group>
+                        <group><field name="type_id" string="Property Type"/></group>
+                        <group>
+                            <field name="date_availablity" string="Meeting Date"/>
+                            <field name="meeting_state" string="Meeting State"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Detail">
+                            <group>
+                                <field name="property_painting" string="Painting" attrs="{'readonly':[('meeting_state','=','generted')]}"/>
+                                <field name="property_furnishing" string="Furnishing" attrs="{'readonly':[('meeting_state','=','genexrted')]}"/>
+                                <field name="total_cost" string="Total Cost"/>
+                            </group>
+                        </page>
+                        <!-- <page string="Paint" attrs="{'invisible': [('property_painting', '!=', True)]}">
+                            <group>
+                                <field name="paint_colors" />
+                            </group>
+                        </page> -->
+                        <page string="Consultant">
+                            <group>
+                                <field name="consultant_id" string="Consultant"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="message_ids" />
+                    <field name="activity_ids" />
+               </div>
+            </form>
+         </field>
+     </record>
+
+     <record id="consultation_real_meet_search" model="ir.ui.view">
+        <field name="name">Consultation Real Meet Search View</field>
+        <field name="model">consultaion.real.meet</field>
+        <field name="arch" type="xml">
+            <search string="Search Views">
+                <field name="customer_name" string="Title"/>
+                <field name="property_painting" string="Painting"/>
+                <field name="property_furnishing" string="Furnishing"/>
+                <field name="type_id" string="Property Type"/>
+                <field name="date_availablity" string="Meeting Date"/>
+                <filter name="meeting_state" string="Booked" domain="[('meeting_state','=','generted')]"/>
+            </search>
+        </field>
+     </record>
+</odoo>
+
+<!-- <group expand="1" string="Group By">
+    <filter string="Postcode" name="postcode" context="{'group_by':'postcode', 'residual_visible':True}"/>
+</group> -->

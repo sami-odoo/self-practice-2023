@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="Employee_tag_demo1" model="employee.tag">
+            <field name="name">Best</field>
+         </record>
+    
+         <record id="Employee_tag_demo2" model="employee.tag">
+            <field name="name">Hard working</field>
+         </record>
+    
+         <record id="Employee_tag_demo3" model="employee.tag">
+            <field name="name">Average</field>
+         </record>
+    
+         <record id="Employee_tag_demo4" model="employee.tag">
+            <field name="name">Under Performing</field>
+         </record>
+
+    </data>
+</odoo>

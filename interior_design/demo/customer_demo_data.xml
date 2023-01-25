@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="customer_info_demo1" model="customer.info">
+            <field name="name">cillian</field>
+            <field name="price">234000</field>
+         </record>
+    
+         <record id="customer_info_demo2" model="customer.info">
+            <field name="name">Tommy</field>
+            <field name="price">345600</field>
+         </record>
+    
+         <record id="customer_info_demo3" model="customer.info">
+            <field name="name">Verstappen</field>
+            <field name="price">560000</field>
+         </record>
+    
+         <record id="customer_info_demo4" model="customer.info">
+            <field name="name">Leclerc</field>
+            <field name="price">678900</field>
+         </record>
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="Employee_info_demo1" model="interior.employee.dat">
+            <field name="name">Shraddha Dwivedi</field>
+         </record>
+    
+         <record id="Employee_info_demo2" model="interior.employee.dat">
+            <field name="name">Pradeep Mishra</field>
+         </record>
+    
+         <record id="Employee_info_demo3" model="interior.employee.dat">
+            <field name="name">Ramesh Kalal</field>
+         </record>
+    
+         <record id="Employee_info_demo4" model="interior.employee.dat">
+            <field name="name">Suresh Patel</field>
+         </record>
+
+         <record id="Employee_info_demo5" model="interior.employee.dat">
+            <field name="name">Kevin Jacob</field>
+         </record>
+
+    </data>
+</odoo>

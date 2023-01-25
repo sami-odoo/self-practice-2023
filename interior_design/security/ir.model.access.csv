@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+interior_admin,Admin User,model_design_interior,,1,1,1,1
+interior_design.access_design_interior_rennovation,access_design_interior_rennovation,interior_design.model_design_interior_rennovation,,1,1,1,1
+interior_design.access_consultaion_virtual_meet,access_consultaion_virtual_meet,interior_design.model_consultaion_virtual_meet,,1,1,1,1
+interior_design.access_consultaion_real_meet,access_consultaion_real_meet,interior_design.model_consultaion_real_meet,,1,1,1,1
+interior_design.access_rennovation_stories,access_rennovation_stories,interior_design.model_rennovation_stories,,1,1,1,1
+type_admin,type user,model_interior_design_property_type,,1,1,1,1
+paint_user,paint admin,model_design_interior_paint,,1,1,1,1
+customer_relation_with_company_id,Customer Admin,model_customer_relation_company,,1,1,1,1
+employee_data_id,Employee Admin,model_interior_employee_dat,,1,1,1,1
+employee_tag_id,employee tag admin,model_employee_tag,,1,1,1,1
+customer_info_id,Customer Info Admin,model_customer_info,,1,1,1,1
+

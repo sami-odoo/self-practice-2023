@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="Interior_design_demo1" model="design.interior">
+            <field name="name">Shahid Kaoor</field>
+            <field name="c_email">shahidkapoor@gmail.com</field>
+            <field name="phone_no">1111111</field>
+         </record>
+
+         <record id="Interior_design_demo2" model="design.interior">
+            <field name="name">Ajay Devgn</field>
+            <field name="c_email">ajaydevgn@gmail.com</field>
+            <field name="phone_no">2222222</field>
+         </record>
+    </data>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="Consultation_real_demo1" model="consultaion.real.meet">
+            <field name="customer_name">Shaan Thakkar</field>
+            <field name="property_painting">1</field>
+         </record>
+    
+         <record id="Consultation_real_demo2" model="consultaion.real.meet">
+            <field name="customer_name">Dhrutik Patel</field>
+            <field name="property_furnishing">1</field>
+         </record>
+    
+         <record id="Consultation_real_demo3" model="consultaion.real.meet">
+            <field name="customer_name">Raj Madhu</field>
+            <field name="property_painting">1</field>
+         </record>
+    
+         <record id="Consultation_real_demo4" model="consultaion.real.meet">
+            <field name="customer_name">Rahul Reddiar</field>
+            <field name="property_furnishing">1</field>
+         </record>
+    
+         <record id="Consultation_real_demo5" model="consultaion.real.meet">
+            <field name="customer_name">Mohit Beniwal</field>
+            <field name="property_painting">1</field>
+            <field name="property_furnishing">1</field>
+         </record>
+    </data>
+</odoo>

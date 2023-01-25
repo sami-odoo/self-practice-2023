@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="property_type_demo1" model="interior.design.property.type">
+            <field name="name">Villa</field>
+        </record>
+    
+        <record id="property_type_demo2" model="interior.design.property.type">
+            <field name="name">Penthouse</field>
+        </record> 
+
+        <record id="property_type_demo3" model="interior.design.property.type">
+            <field name="name">Bunglow</field>
+        </record>
+
+        <record id="property_type_demo4" model="interior.design.property.type">
+            <field name="name">Flats</field>
+        </record>
+
+        <record id="property_type_demo5" model="interior.design.property.type">
+            <field name="name">Corporate Office</field>
+        </record>
+
+        <record id="property_type_demo6" model="interior.design.property.type">
+            <field name="name">Restaurant</field>
+        </record>
+
+        <record id="property_type_demo7" model="interior.design.property.type">
+            <field name="name">Motels</field>
+        </record>
+
+        <record id="property_type_demo8" model="interior.design.property.type">
+            <field name="name">Cafe</field>
+        </record>
+
+        <record id="property_type_demo9" model="interior.design.property.type">
+            <field name="name">Bar</field>
+        </record>
+
+        <record id="property_type_demo10" model="interior.design.property.type">
+            <field name="name">Gym</field>
+        </record>
+    </data>
+</odoo>

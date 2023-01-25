@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="interior_paint_action" model="ir.actions.act_window">
+        <field name="name">Paints</field>
+        <field name="res_model">design.interior.paint</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No colors added
+            </p>
+        </field>
+    </record>
+
+    <record id="interior_paint_list_view" model="ir.ui.view">
+       <field name="name">Interior Paint List View</field>
+       <field name="model">design.interior.paint</field>
+       <field name="arch" type="xml">
+            <tree string="Channel" >
+                <field name="name" string="Color"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

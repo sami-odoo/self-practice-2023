@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <menuitem id="design_menu_root" name="Interior Design" action="interior_design_action" web_icon="interior_design,static/description/icon.png">
+          <menuitem id="Employees_first_level" name="Employees">
+               <menuitem id="employees_menu_action1" action="employee_action" name="Employee Info"/>
+               <menuitem id="employees_menu_action2" action="employee_tag_action" name="Employee Tags"/>
+          </menuitem>
+          
+         <menuitem id="design_first_level_menu" name="Consultation" >
+              <menuitem id="design_menu_action1"  name="Enquiry">
+                     <menuitem id="consultaion_real_meet_action1" action="consultation_real_meet_action" name="Real Meet"/>
+                     <menuitem id="consultaion_virtual_meet_action1" action="consultation_virtual_meet_action" name="Virtual Meet"/>
+              </menuitem>
+         </menuitem>
+
+         <menuitem id="rennovation_first_level_menu" name="Rennovation" >
+              <menuitem id="rennovation_menu_action1" action="interior_design_rennovation" name="Furniture"/>
+              <menuitem id="rennovation_menu_action2" action="interior_paint_action" name="Paint"/>
+         </menuitem>
+
+         <menuitem id="stories_first_level" name="Stories" action="stories_action"/>
+       
+         <!-- <menuitem id="Customer_info_first_level" name="Customer Information" action="customer_info_action"/> -->
+    </menuitem>
+</odoo>
