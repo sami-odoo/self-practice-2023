@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="furniture_demo_1" model="design.interior.rennovation">
+            <field name="name">Wooden</field>
+        </record>
+        <record id="furniture_demo_2" model="design.interior.rennovation">
+            <field name="name">Marble</field>
+        </record>
+        <record id="furniture_demo_3" model="design.interior.rennovation">
+            <field name="name">Aluminium</field>
+        </record>
+    </data>
+</odoo>

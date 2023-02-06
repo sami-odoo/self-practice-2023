@@ -47,6 +47,8 @@ class Consultation_virtual_meet(models.Model):
     def perform_booking(self):
         for record in self:
             record.meeting_state = 'generted'
+
+    
         
     # @api.model
     # def create(self, values):

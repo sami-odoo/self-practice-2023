@@ -8,4 +8,5 @@ class Employees_data(models.Model):
     tag_id = fields.Many2one("employee.tag")
     appointment_ids = fields.One2many("consultaion.real.meet","consultant_id")
     online_appointment_ids = fields.One2many("consultaion.virtual.meet","consultant_id")
+    image = fields.Image(string='Image')
     

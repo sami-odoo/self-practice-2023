@@ -9,6 +9,7 @@
     'depends':['mail'],
     'data':[
             'security/ir.model.access.csv',
+            'security/interioir_design_security.xml',
             'views/design_view_action.xml',
             'views/design_rennovation.xml',
             'views/consultation_virtual_meet_view.xml',
@@ -18,7 +19,9 @@
             'views/employee_info.xml',
             'views/employee_tag_view.xml',
             'views/customer_informatio_page.xml',
-            'views/design_menu_view.xml'
+            'views/design_menu_view.xml',
+            'report/interioir_account_report.xml',
+            'report/interioir_account_template.xml',
     ],
     'demo':[
         'demo/employee_info_demo.xml',
@@ -28,7 +31,8 @@
         'demo/employee_tag_demo.xml',
         'demo/customer_demo_data.xml',
         'demo/consultation_virtual_meet_demo.xml',
-        'demo/interioir_design_demo.xml'
+        'demo/interioir_design_demo.xml',
+        'demo/furniture_demo.xml',
     ],
     'installable': True,
     'application': True,

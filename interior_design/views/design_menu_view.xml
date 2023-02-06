@@ -2,7 +2,7 @@
 
 <odoo>
     <menuitem id="design_menu_root" name="Interior Design" action="interior_design_action" web_icon="interior_design,static/description/icon.png">
-          <menuitem id="Employees_first_level" name="Employees">
+          <menuitem id="Employees_first_level" name="Employees" groups="design_group_admin">
                <menuitem id="employees_menu_action1" action="employee_action" name="Employee Info"/>
                <menuitem id="employees_menu_action2" action="employee_tag_action" name="Employee Tags"/>
           </menuitem>

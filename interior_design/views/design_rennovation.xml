@@ -2,7 +2,7 @@
 
 <odoo>
     <record id="interior_design_rennovation" model="ir.actions.act_window">
-        <field name="name">Rennovation</field>
+        <field name="name">Furniture</field>
         <field name="res_model">design.interior.rennovation</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
@@ -17,8 +17,20 @@
        <field name="model">design.interior.rennovation</field>
        <field name="arch" type="xml">
             <tree string="Channel" >
-                <field name="rennovation_type" string="Title"/>
+                <field name="name" string="Fruniture"/>
             </tree>
         </field>
     </record>
+
+    <record id="rennovation_form_view" model="ir.ui.view">
+        <field name="name">Rennovation Form View</field>
+        <field name="model">design.interior.rennovation</field>
+        <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <field name="name" string="Fruniture" />
+            </sheet>
+        </form>
+         </field>
+     </record>
 </odoo>

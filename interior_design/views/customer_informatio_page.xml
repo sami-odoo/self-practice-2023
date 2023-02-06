@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- <record id="customer_info_action" model="ir.actions.act_window">
-        <field name="name">Customer Info</field>
-        <field name="res_model">customer.info</field>
-        <field name="view_mode">tree,form</field>
-        <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">
-                No Employees Yet
-            </p>
-        </field>
-    </record> -->
-
     <record id="customer_info_list_view" model="ir.ui.view">
        <field name="name">Customer Info List View</field>
        <field name="model">customer.info</field>

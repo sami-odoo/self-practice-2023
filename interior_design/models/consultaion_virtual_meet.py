@@ -17,6 +17,7 @@ class Consultation_virtual_meet(models.Model):
     date_availablity = fields.Date(copy=False,default=fields.date.today())
     meeting_state = fields.Selection(copy=False,selection=[('new','NEW'),('generted','APPOINTMENT BOOKED'),('done','DONE'),('cancelled','APPOINTMENT CANCELLED')],default='new',tracking=True)
     consultant_id = fields.Many2one("interior.employee.dat")
+    url_field = fields.Char('URL', default='https://www.odoo.com')
     
 
     @api.depends('property_painting')

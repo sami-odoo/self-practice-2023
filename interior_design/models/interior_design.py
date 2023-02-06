@@ -21,9 +21,14 @@ class Interior_desigining(models.Model):
     h_state = fields.Char()
     h_pin = fields.Char()
     work_state = fields.Selection(copy=False,selection=[('new','NEW'),('measurements','Measurements'),('designing','Designing'),('painting','Painting'),('furnishing','Furnishing'),('cleaning','Cleaning'),('cancelled','Cancelled')],default='new',tracking=True)
+    paint = fields.Boolean()
+    furnish = fields.Boolean()
+    
 
     # Relational Fields
     property_type_id = fields.Many2one("interior.design.property.type")
+    paint_colors = fields.Many2many("design.interior.paint")
+    furnish_products = fields.Many2many("design.interior.rennovation")
 
 
     # actions

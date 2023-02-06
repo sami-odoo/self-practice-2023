@@ -20,9 +20,13 @@
                 <field name="name" string="Customer Name"/>
                 <field name="c_email" string="Email Adress"/>
                 <field name="phone_no" string="Phone number"/>
+                <field name="paint" string="Painting"/>
+                <field name="furnish" string="Furnishing"/>
                 <field name="c_end_date" string="Expected Deadline"/>
                 <field name="work_state" string="Progress"/>
                 <field name="property_type_id" string="Property Type"/>
+                <field name="paint_colors" string="Colors needed" optional="hidden"/>
+                <field name="furnish_products" string="Furnish Material" optional="hidden"/>
             </tree>
         </field>
     </record>
@@ -67,6 +71,14 @@
                                 <field name="h_city" string="City"/>
                                 <field name="h_state" string="State"/>
                                 <field name="h_pin" string="Pincode"/>
+                            </group>
+                        </page>
+                        <page string="work">
+                            <group>
+                                <field name="paint" string="Painting"/>
+                                <field name="paint_colors" widget="many2many_tags" options="{'color_field':'color'}" attrs="{'invisible': [('paint','=',False)]}"/>
+                                <field name="furnish" string="Furnishing"/>
+                                <field name="furnish_products" widget="many2many_tags" attrs="{'invisible': [('furnish','=',False)]}"/>
                             </group>
                         </page>
                     </notebook>

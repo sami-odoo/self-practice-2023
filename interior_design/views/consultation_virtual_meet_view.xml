@@ -23,6 +23,7 @@
                  <field name="type_id" string="Property Type"/>
                  <field name="date_availablity" string="Meeting Date"/>
                  <field name="meeting_state" string="Meeting State"/>
+                 <field name="url_field" string="Meeting State" optional="hidden"/>
              </tree>
          </field>
      </record>
@@ -61,6 +62,7 @@
                                 <field name="property_painting" string="Painting" attrs="{'readonly':[('meeting_state','=','generted')]}"/>
                                 <field name="property_furnishing" string="Furnishing" attrs="{'readonly':[('meeting_state','=','genexrted')]}"/>
                                 <field name="total_cost" string="Total Cost"/>
+                                <field name="url_field" string="Meeting State"/>
                             </group>
                         </page>
                         <page string="Consultant">
