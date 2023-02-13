@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-     Interioir Design Employee Group
-     <record id="design_group_employee" model="res.groups">
-        <field name="name">Design Employee</field>
-        <field name="category_id" ref="base.module_category_marketing"/>
-    </record>
+    Interioir Design Portal User
+    <record id="design_group_portal_user" model="res.groups">
+       <field name="name">Design Portal User</field>
+       <field name="category_id" ref="base.module_category_marketing"/>
+   </record>
 
-     Interioir Design Admin Group
-     <record id="design_group_admin" model="res.groups">
+    Interioir Design Employee Group
+    <record id="design_group_employee" model="res.groups">
+       <field name="name">Design Employee</field>
+       <field name="category_id" ref="base.module_category_marketing"/>
+       <field name="implied_ids" eval="[(4, ref('interior_design.design_group_portal_user'))]"/>
+   </record>
+
+    Interioir Design Admin Group
+    <record id="design_group_admin" model="res.groups">
         <field name="name">Design Admin</field>
         <field name="category_id" ref="base.module_category_marketing"/>
         <field name="implied_ids" eval="[(4, ref('interior_design.design_group_employee'))]"/>
     </record>
-
 
 </odoo>

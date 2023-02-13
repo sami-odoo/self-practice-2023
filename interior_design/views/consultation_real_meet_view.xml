@@ -17,7 +17,7 @@
         <field name="name">Consultation Real List View</field>
         <field name="model">consultaion.real.meet</field>
         <field name="arch" type="xml">
-             <tree string="Channel" >
+             <tree string="Channel" decoration-success="meeting_state=='new'" decoration-danger="meeting_state=='cancelled'">
                  <field name="customer_name" string="Title"/>
                  <field name="property_painting" string="Painting"/>
                  <field name="property_furnishing" string="Furnishing"/>

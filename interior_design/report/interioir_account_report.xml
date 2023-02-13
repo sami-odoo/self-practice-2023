@@ -3,7 +3,7 @@
     <record id="report_offers_of_property" model="ir.actions.report">
         <field name="name">Work Report</field>
         <field name="model">design.interior</field>
-        <field name="report_type">qweb-html</field>
+        <field name="report_type">qweb-pdf</field>
         <field name="report_name">interior_design.design_report</field>
         <field name="report_file">interior_design.design_report</field>
         <field name="binding_model_id" ref="model_design_interior"/>

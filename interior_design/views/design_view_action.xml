@@ -16,7 +16,7 @@
        <field name="name">Interior Design List View</field>
        <field name="model">design.interior</field>
        <field name="arch" type="xml">
-            <tree string="Channel" >
+            <tree string="Channel" decoration-success="work_state=='measurements'" decoration-warning="work_state=='designing'" decoration-danger="work_state=='cancelled'">
                 <field name="name" string="Customer Name"/>
                 <field name="c_email" string="Email Adress"/>
                 <field name="phone_no" string="Phone number"/>

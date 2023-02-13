@@ -14,7 +14,7 @@
               </menuitem>
          </menuitem>
 
-         <menuitem id="rennovation_first_level_menu" name="Rennovation" >
+         <menuitem id="rennovation_first_level_menu" name="Rennovation" groups="design_group_employee">
               <menuitem id="rennovation_menu_action1" action="interior_design_rennovation" name="Furniture"/>
               <menuitem id="rennovation_menu_action2" action="interior_paint_action" name="Paint"/>
          </menuitem>

@@ -23,7 +23,6 @@ class Interior_desigining(models.Model):
     work_state = fields.Selection(copy=False,selection=[('new','NEW'),('measurements','Measurements'),('designing','Designing'),('painting','Painting'),('furnishing','Furnishing'),('cleaning','Cleaning'),('cancelled','Cancelled')],default='new',tracking=True)
     paint = fields.Boolean()
     furnish = fields.Boolean()
-    
 
     # Relational Fields
     property_type_id = fields.Many2one("interior.design.property.type")
