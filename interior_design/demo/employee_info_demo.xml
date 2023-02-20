@@ -3,7 +3,7 @@
 <odoo>
     <data>
         <record id="Employee_info_demo1" model="interior.employee.dat">
-            <field name="name">Shraddha Dwivedi</field>
+            <field name="name">Katrina Kaif</field>
          </record>
     
          <record id="Employee_info_demo2" model="interior.employee.dat">

@@ -9,4 +9,7 @@ class Employees_data(models.Model):
     appointment_ids = fields.One2many("consultaion.real.meet","consultant_id")
     online_appointment_ids = fields.One2many("consultaion.virtual.meet","consultant_id")
     image = fields.Image(string='Image')
+    emp_email = fields.Char()
+    emp_call = fields.Char()
+
     

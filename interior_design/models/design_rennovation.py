@@ -5,3 +5,4 @@ class Design_rennovation(models.Model):
     _description = "This is pasrt of interior design but for rennovation purpose"
 
     name = fields.Char(required=True)
+    image = fields.Image()

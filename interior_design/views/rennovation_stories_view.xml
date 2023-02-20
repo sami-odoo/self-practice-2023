@@ -17,6 +17,7 @@
         <field name="arch" type="xml">
            <tree>
                 <field name="name" string="Customer Name"/>
+                <field name="call" string="Phone"/>
                 <field name="rating" string="Rating" widget="priority"/>
                 <field name="review" string="Customer Review" optional="hidden"/>
                 <field name="image" string="Customer Review"  optional="hidden"/>
@@ -40,6 +41,7 @@
                         <field name="name" string="Customer Name"/>
                         <field name="rating" string="Rating" widget="priority"/>
                         <field name="review" string="Customer Review"/>
+                        <field name="call" string="Phone Number"/>
                     </group>
                 </sheet>
            </form>
@@ -63,8 +65,8 @@
                                 <field name="name"/>
                             </strong><br/>
                             <field name="rating" widget="priority"/> 
-                            <div>
-                                <field name="call" class="fa-solid fa-phone" widget="call_queue_switch"/>
+                            <div class="inline-end mt-5">
+                                <field name="call" class="fa fa-phone"/>
                             </div>
                         </div>
                     </t>

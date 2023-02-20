@@ -10,5 +10,5 @@ class Rennovation_stories(models.Model):
     review = fields.Text()
     rating = fields.Selection(copy=False,selection=[('0','Very Low'),('1','Low'),('2','Average'),('3','Good'),('4','Very Good'),('5','Best')])
     image = fields.Image(string='Image')
-    call = fields.Boolean()
+    call = fields.Char()
     
