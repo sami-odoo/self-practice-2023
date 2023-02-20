@@ -29,6 +29,9 @@
         <field name="model">rennovation.stories</field>
         <field name="arch" type="xml">
            <form>
+            <header>
+                <button type="action" name="%(interior_design_wizard_action)d" string="Send Remark"/>
+            </header>
                 <sheet>
                     <div class="oe_avatar">
                         <field name="image" widget="image" options='{"preview_image": "image", "size": [100,100]}'/>
@@ -60,6 +63,9 @@
                                 <field name="name"/>
                             </strong><br/>
                             <field name="rating" widget="priority"/> 
+                            <div>
+                                <field name="call" class="fa-solid fa-phone" widget="call_queue_switch"/>
+                            </div>
                         </div>
                     </t>
                 </templates>

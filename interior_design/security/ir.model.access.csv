@@ -10,4 +10,5 @@ customer_relation_with_company_id,Customer Admin,model_customer_relation_company
 employee_data_id,Employee Admin,model_interior_employee_dat,,1,1,1,1
 employee_tag_id,employee tag admin,model_employee_tag,,1,1,1,1
 customer_info_id,Customer Info Admin,model_customer_info,,1,1,1,1
+access_employee_remark,Employee Remark Admin,model_employee_remark,,1,1,1,1
 

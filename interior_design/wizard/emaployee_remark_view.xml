@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Remarks action -->
+        <record id="interior_design_wizard_action" model="ir.actions.act_window">
+            <field name="name">Design Wizard</field>
+            <field name="res_model">employee.remark</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="design_wizard_form_view_id" model="ir.ui.view">
+            <field name="name">Design Wizard form</field>
+            <field name="model">employee.remark</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="remarks" string="Remarks"/>
+                            <field name="discount" string="Discount"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button special="cancel" string="Cancel"  class="btn btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

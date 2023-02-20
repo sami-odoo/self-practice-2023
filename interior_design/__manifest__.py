@@ -14,6 +14,7 @@
             'views/design_rennovation.xml',
             'views/consultation_virtual_meet_view.xml',
             'views/consultation_real_meet_view.xml',
+            'wizard/emaployee_remark_view.xml',
             'views/rennovation_stories_view.xml',
             'views/design_interior_paint.xml',
             'views/employee_info.xml',
