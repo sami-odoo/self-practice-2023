@@ -11,5 +11,13 @@ class Employees_data(models.Model):
     image = fields.Image(string='Image')
     emp_email = fields.Char()
     emp_call = fields.Char()
+    phone = fields.Char()
+    email = fields.Char()
+    addr = fields.Text()
+
+
+
+
+    
 
     

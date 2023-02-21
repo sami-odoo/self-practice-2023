@@ -24,6 +24,9 @@
                  <field name="type_id" string="Property Type"/>
                  <field name="date_availablity" string="Meeting Date"/>
                  <field name="meeting_state" string="Meeting State"/>
+                 <field name="phone" string="Employee Phone" />
+                 <field name="email" string="Employee Email" />
+                 <field name="addr" string="Employee Address" optional="hidden" />
              </tree>
          </field>
      </record>
@@ -50,7 +53,12 @@
                     </h1>
                     <br/>    
                     <group>
-                        <group><field name="type_id" string="Property Type"/></group>
+                        <group>
+                            <field name="type_id" string="Property Type"/>
+                            <field name="phone" string="Employee Phone" />
+                            <field name="email" string="Employee Email" />
+                            <field name="addr" string="Employee Address" optional="hidden" />
+                        </group>
                         <group>
                             <field name="date_availablity" string="Meeting Date"/>
                             <field name="meeting_state" string="Meeting State"/>

@@ -54,9 +54,20 @@
                           <div class="mt-3">
                             <h2>Furnishing Materials:</h2>
                             <t>
-                              <span t-if="work.furnish" t-foreach="work.furnish_products" t-as="prod" >
-                                  <span t-esc="prod.name"></span>,
-                              </span>
+                              <t t-if="work.furnish" >
+                                    <table class="table">
+                                      <tr>
+                                        <th>Name</th>
+                                        <th>Image</th>
+                                      </tr>
+                                      <t t-foreach="work.furnish_products" t-as="prod">
+                                        <tr>
+                                          <th><span t-esc="prod.name"></span></th>
+                                          <td><img t-att-src="image_data_uri(prod.image)" width="100" height="100"/></td>
+                                        </tr>
+                                      </t>
+                                    </table> 
+                              </t>
                               <span t-else="">
                                 <span>No Materials</span>
                               </span>

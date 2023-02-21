@@ -17,6 +17,9 @@ class Consultation_virtual_meet(models.Model):
     paint_colors = fields.Many2many("design.interior.paint")
     meeting_state = fields.Selection(copy=False,selection=[('new','NEW'),('generted','APPOINTMENT BOOKED'),('done','DONE'),('cancelled','APPOINTMENT CANCELLED')],default='new',tracking=True)
     consultant_id = fields.Many2one("interior.employee.dat")
+    addr = fields.Text()
+    phone = fields.Char()
+    email = fields.Char()
 
 
     @api.depends('property_painting')

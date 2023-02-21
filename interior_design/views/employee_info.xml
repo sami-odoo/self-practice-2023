@@ -13,15 +13,18 @@
     </record>
 
     <record id="employee_list_view" model="ir.ui.view">
-       <field name="name">Employee List View</field>
-       <field name="model">interior.employee.dat</field>
-       <field name="arch" type="xml">
+        <field name="name">Employee List View</field>
+        <field name="model">interior.employee.dat</field>
+        <field name="arch" type="xml">
             <tree string="Channel">
-                <field name="name" string="Employee name"/>
-                <field name="tag_id" string="Employee Tags"/>
-                <field name="image" string="Employee Image" optional="hidden"/>
-                <field name="emp_email" string="Employee Email" optional="hidden"/>
-                <field name="emp_call"/>
+                <field name="name" string="Employee name" />
+                <field name="tag_id" string="Employee Tags" />
+                <field name="image" string="Employee Image" optional="hidden" />
+                <field name="emp_email" string="Employee Email" optional="hidden" />
+                <field name="emp_call" />
+                <field name="phone" string="Employee Phone" />
+                <field name="email" string="Employee Email" />
+                <field name="addr" string="Employee Address" optional="hidden" />
             </tree>
         </field>
     </record>
@@ -30,78 +33,95 @@
         <field name="name">Employee Form View</field>
         <field name="model">interior.employee.dat</field>
         <field name="arch" type="xml">
-             <form>
+            <form>
                 <sheet>
                     <div class="oe_avatar">
-                        <field name="image" widget="image" options='{"preview_image": "image", "size": [100,100]}'/>
+                        <field name="image" widget="image"
+                            options='{"preview_image": "image", "size": [100,100]}' />
                     </div>
-                    <h1><field name="name" string="Employee name"/></h1>
+                    <h1>
+                        <field name="name" string="Employee name" />
+                    </h1>
                     <group>
-                        <field name="tag_id" string="Employee Tags"/>
-                        <field name="emp_email"/>
-                        <field name="emp_call"/>
+                        <group>
+                            <field name="tag_id" string="Employee Tags" />
+                            <field name="emp_email" />
+                            <field name="emp_call" />
+                        </group>
+                        <group>
+                            <field name="phone" string="Employee Phone" widget="phone" />
+                            <field name="email" string="Employee Email" widget="email" />
+                            <field name="addr" string="Employee Address" optional="hidden" />
+                        </group>
                     </group>
-                    <br/>
+                    <br />
                     <notebook>
                         <page name="unique_name" string="Real">
                             <!-- <group> -->
-                                <field name="appointment_ids"/>
+                            <field name="appointment_ids" />
                             <!-- </group> -->
                         </page>
                         <page string="Virtual">
                             <!-- <group> -->
-                                <field name="online_appointment_ids"/>
+                            <field name="online_appointment_ids" />
                             <!-- </group> -->
                         </page>
                     </notebook>
                 </sheet>
-             </form>
-         </field>
-     </record>
+            </form>
+        </field>
+    </record>
 
-     <record id="employee_info_search_id" model="ir.ui.view">
+    <record id="employee_info_search_id" model="ir.ui.view">
         <field name="name">Employee Search View</field>
         <field name="model">interior.employee.dat</field>
         <field name="arch" type="xml">
             <search string="Search Views">
-                <field name="name" string="Employee name"/>
-                <filter name="tag_id" string="Best Employee" domain="[('tag_id','=','Best')]"/>
-                <filter name="tag_id" string="Hard Working" domain="[('tag_id','=','Hard working')]"/>
-                <filter name="tag_id" string="Under Performing" domain="[('tag_id','=','Under Performing')]"/>
+                <field name="name" string="Employee name" />
+                <filter name="tag_id" string="Best Employee" domain="[('tag_id','=','Best')]" />
+                <filter name="tag_id" string="Hard Working" domain="[('tag_id','=','Hard working')]" />
+                <filter name="tag_id" string="Under Performing"
+                    domain="[('tag_id','=','Under Performing')]" />
                 <group expand="1">
-                    <filter name="tag_id" context="{'group_by':'tag_id'}" string="Epmloyees Badge"/>
+                    <filter name="tag_id" context="{'group_by':'tag_id'}" string="Epmloyees Badge" />
                 </group>
             </search>
         </field>
-     </record>
+    </record>
 
-     <record id="employee_info_kanban_id" model="ir.ui.view">
+    <record id="employee_info_kanban_id" model="ir.ui.view">
         <field name="name">Employee Kanban</field>
         <field name="model">interior.employee.dat</field>
         <field name="arch" type="xml">
             <kanban default_group_by="tag_id" records_draggable="False" class="oe_background_grey">
                 <field name="id" />
-                <field name="image"/> 
-                <field name="name"/> 
-                <field name="tag_id"/> 
+                <field name="image" />
+                <field name="name" />
+                <field name="tag_id" />
                 <templates>
                     <t t-name="kanban-box">
                         <div class="oe_kanban_global_click">
-                            <img t-att-src="kanban_image('interior.employee.dat', 'image',record.id.raw_value)" alt="Cannot Load" class="oe_kanban_avatar float-start me-3" width="80" height="80"/>
+                            <img
+                                t-att-src="kanban_image('interior.employee.dat', 'image',record.id.raw_value)"
+                                alt="Cannot Load" class="oe_kanban_avatar float-start me-3"
+                                width="80" height="80" />
                             <strong class="o_kanban_record_title">
-                                <field name="name"/>
-                            </strong><br/>
-                            <field name="tag_id"/> 
+                                <field name="name" />
+                            </strong>
+                            <br />
+                            <field name="tag_id" />
                             <div class="mt-2">
-                                 <span class="fa fa-envelope"></span> <field name="emp_email"  />
+                                <span class="fa fa-envelope"></span>
+                                <field name="emp_email" />
                             </div>
                             <div class="mt-1">
-                                <span class="fa fa-phone"></span> <field name="emp_call"  />
-                           </div>
+                                <span class="fa fa-phone"></span>
+                                <field name="emp_call" />
+                            </div>
                         </div>
                     </t>
                 </templates>
             </kanban>
         </field>
-     </record>
+    </record>
 </odoo>
